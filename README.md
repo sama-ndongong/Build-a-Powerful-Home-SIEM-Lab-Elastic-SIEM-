@@ -42,29 +42,12 @@ To set up the Linux VM, follow these steps:
 
 1. Log in to your Elastic SIEM instance.
 2. Navigate to the Integrations page by clicking on the Kibana main menu at the top left and selecting “Integrations” at the bottom.
-
-![Integrations Page](images/integrations_page.png)
-
 3. Search for “Elastic Defend” and click on it to open the integration page.
-
-![Elastic Defend](images/elastic_defend.png)
-
 4. Click on “Add Elastic Defend” and follow the on-screen instructions to install the agent on your Kali VM.
-
-![Add Elastic Defend](images/add_elastic_defend.png)
-
 5. Under Linux Tar, copy the command which will be pasted in the Kali terminal.
-
-![Linux Tar Command](images/linux_tar_command.png)
-
 6. Confirm incoming data at the Add the Integration stage.
-
-![Confirm Incoming Data](images/confirm_incoming_data.png)
-
 7. Paste the command into the Kali terminal.
-
 8. After installing the agent, which takes a few minutes, a message will confirm the successful installation. The agent will then start collecting and forwarding logs to your Elastic SIEM instance.
-
 9. You can check if the agent is installed correctly by running the command: `sudo systemctl status elastic-agent.service`.
 
 *Note: If you encounter an error while installing the agent, ensure that your Kali is connected to the internet by pinging google.com before continuing.*
@@ -80,13 +63,7 @@ To ensure the agent is functioning properly, you can generate some security-rela
 
 1. Within your Elastic Deployment, click on the menu icon at the top-left corner (three horizontal lines).
 2. Navigate to the "Logs" tab under "Observability" to view the logs from the Kali VM.
-
-![Observability Logs](images/observability_logs.png)
-
 3. In the search bar, enter a search query to filter the logs (e.g., `event.action: "nmap_scan"` or `process.args: "sudo"`).
-
-![Search Query](images/search_query.png)
-
 4. Click the "Search" button to execute the query.
 5. The search results will be displayed in the table below. To view more details about a specific event, click on the three dots next to it.
 
@@ -95,29 +72,17 @@ To ensure the agent is functioning properly, you can generate some security-rela
 1. Navigate to the Elastic web portal.
 2. Click on the menu icon at the top-left corner.
 3. Under "Analytics," click on "Dashboards."
-
-![Dashboards](images/dashboards.png)
-
 4. Click on the "Create dashboard" button at the top right to start a new dashboard.
 5. Click on the "Create Visualization" button to add a new visualization to the dashboard.
 6. Select "Area" or "Line" as the visualization type.
 7. In the “Metrics” section of the visualization editor, select “Count” as the vertical field type and “Timestamp” as the horizontal field.
-
-![Create Visualization](images/create_visualization.png)
-
 8. Click the "Save" button to save the visualization and complete the settings.
 
 ## Step 7: Create an Alert
 
 1. Click on the menu icon at the top-left corner, then under “Security” click on “Alerts.”
 2. Click on “Manage rules” at the top right.
-
-![Manage Rules](images/manage_rules.png)
-
 3. Click on the "Create new rule" button at the top right.
-
-![Create New Rule](images/create_new_rule.png)
-
 4. In the "Define rule" section, select the "Custom query" option from the dropdown menu.
 5. Under "Custom query," set the conditions for the rule (e.g., `event.action: "nmap_scan"`).
 6. In the "About rule" section, give your rule a name and a description (e.g., Nmap Scan Detection).
@@ -140,3 +105,4 @@ This home lab offers a valuable environment for learning and practicing skills n
 ### Add to Your CV:
 - **Elastic Stack SIEM Configuration and Management:** Successfully set up and configured Elastic Stack SIEM in a home lab environment.
 - **Visualization and Alerting in SIEM:** Developed a custom dashboard in Elastic SIEM and created and tested alert rules for detecting specific security events.
+
